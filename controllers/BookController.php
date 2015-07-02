@@ -66,4 +66,10 @@ class BookController extends Controller{
         return $this->redirect('site/error');
     }
 
+    public function actionDelete($id)
+    {
+        Book::findOne($id)->delete();
+        return $this->goBack();
+    }
+
 }

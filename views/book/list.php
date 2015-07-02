@@ -10,6 +10,7 @@ $this->title = 'Books';
                 <h2><?= $book->name ?></h2>
                 <p><?= $book->author->firstname . ' ' . $book->author->lastname ?></p>
                 <p><a class="btn btn-default" href="<?= \yii\helpers\Url::to(['book/read', 'id' => $book->id]) ?>">Читать</a></p>
+                <p><a class="btn btn-danger" href="<?= \yii\helpers\Url::to(['book/delete', 'id' => $book->id]) ?>">Удалить</a></p>
             </div>
             <?php endforeach ?>
         </div>
