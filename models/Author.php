@@ -31,16 +31,6 @@ class Author extends ActiveRecord{
     }
 
 
-
-    public function attributeLabels()
-    {
-        return [
-            'id' => Yii::t('app', 'ID'),
-            'firstname' => Yii::t('app', 'First Name'),
-            'lastname' => Yii::t('app', 'Last Name'),
-        ];
-    }
-
     public static function lists()
     {
         $all = self::find()->all();

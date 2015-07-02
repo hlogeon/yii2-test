@@ -35,20 +35,6 @@ class Book extends ActiveRecord{
         return $this->hasOne(Author::className(), ['id' => 'author_id']);
     }
 
-    public function attributeLabels()
-    {
-        return [
-            'id' => Yii::t('app', 'ID'),
-            'author_id' => Yii::t('app', 'Author ID'),
-            'name' => Yii::t('app', 'Name'),
-            'preview' => Yii::t('app', 'Preview'),
-            'date' => Yii::t('app', 'Date'),
-            'date_create' => Yii::t('app', 'Date Create'),
-            'date_update' => Yii::t('app', 'Date Update'),
-        ];
-    }
-
-
     public static function tableName()
     {
         return 'books';
